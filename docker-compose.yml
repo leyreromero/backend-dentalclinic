@@ -1,0 +1,14 @@
+version: "3.6"
+services:
+  app_dentalclinic:
+    build: .
+    restart: always
+    container_name: backend_dentalclinic
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+
+volumes:
+  node_modules:
